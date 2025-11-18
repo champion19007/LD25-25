@@ -1,0 +1,41 @@
+# Development files
+*.o
+*.a
+*.so
+*.dll
+*.exe
+*.elf
+*.ppu
+*.geany
+*.patch
+
+# Backup files
+*.*~
+*.bak
+
+# Scratchpad dir
+/var/*
+
+# Auto-generated files
+/Makefile
+/src/buildconfig.pas
+
+# Main build directory
+/build/
+
+# Android-specific build directories
+/android/build/
+/android/app/build/
+
+# Gradle build system-related stuff
+/android/.gradle/
+/android/gradlew.bat
+/android/local.properties
+
+# Android dirs we'll symlink / copy from other places
+/android/app/src/main/assets/
+/android/app/src/main/java/org/
+/android/app/src/main/jniLibs/
+
+# AndroidStudio configuration
+.idea/

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2017-2024 suve <veg@svgames.pl> -->
+<component type="desktop">
+<id>pl.suve.colorful</id>
+	<name>Colorful</name>
+	<project_license>GPL-3.0-only</project_license>
+	<developer id="pl.suve">
+		<name>suve</name>
+	</developer>
+
+	<summary>Side-view shooter game</summary>
+	<summary xml:lang="pl">Strzelanka 2D</summary>
+
+	<description>
+		<p>
+			Colorful is a simple side-view shooter game, where the protagonist
+			travels a maze of caves and corridors in order to collect color artefacts.
+		</p>
+		<p xml:lang="pl">
+			Colorful jest prostą strzelanką z widokiem z boku, w której bohater
+			przemierza labirynt jaskiń i korytarzy w celu zebrania kolorowych artefaktów.
+		</p>
+	</description>
+
+	<categories>
+		<category>Game</category>
+	</categories>
+
+	<launchable type="desktop-id">pl.suve.colorful.desktop</launchable>
+
+	<requires>
+		<internet>offline-only</internet>
+	</requires>
+	<recommends>
+		<control>keyboard</control>
+	</recommends>
+	<supports>
+		<control>gamepad</control>
+	</supports>
+
+	<content_rating type="oars-1.1">
+		<content_attribute id="violence-cartoon">moderate</content_attribute>
+		<content_attribute id="violence-bloodshed">mild</content_attribute>
+		<content_attribute id="money-purchasing">mild</content_attribute>
+	</content_rating>
+
+	<branding>
+		<color type="primary" scheme_preference="light">#cccccc</color>
+		<color type="primary" scheme_preference="dark">#3f3f3f</color>
+	</branding>
+
+	<screenshots>
+		<screenshot type="default">
+			<image>https://svgames.pl/fedora/appdata/colorful-2.1-purple.png</image>
+		</screenshot>
+		<screenshot>
+			<image>https://svgames.pl/fedora/appdata/colorful-2.1-teal.png</image>
+		</screenshot>
+		<screenshot>
+			<image>https://svgames.pl/fedora/appdata/colorful-2.1-white.png</image>
+		</screenshot>
+		<screenshot>
+			<image>https://svgames.pl/fedora/appdata/colorful-2.1-green.png</image>
+		</screenshot>
+		<screenshot>
+			<image>https://svgames.pl/fedora/appdata/colorful-2.1-black.png</image>
+		</screenshot>
+		<screenshot>
+			<image>https://svgames.pl/fedora/appdata/colorful-2.1-yellow.png</image>
+		</screenshot>
+		<screenshot>
+			<image>https://svgames.pl/fedora/appdata/colorful-2.1-blue.png</image>
+		</screenshot>
+		<screenshot>
+			<image>https://svgames.pl/fedora/appdata/colorful-2.1-red.png</image>
+		</screenshot>
+	</screenshots>
+
+	<url type="homepage">https://svgames.pl/</url>
+	<url type="bugtracker">https://github.com/suve/LD25/issues/</url>
+	<url type="vcs-browser">https://github.com/suve/LD25/</url>
+
+	<releases>
+		<release version="2.2" date="2025-01-11">
+			<description>
+				<p>Version 2.2 brings some new features to the game.</p>
+				<ul>
+					<li>
+						The game can now be played using controllers/gamepads. Note that this is currently
+						supported only inside the game proper; menus are still limited to keyboard &amp; touch.
+					</li>
+					<li>
+						The game will now keep track of the order in which colours are retrieved,
+						and use that order when displaying the outro slides. The slides themselves
+						have been reworked from the hero holding a generic &quot;star&quot; item
+						(which does not even appear in the game) to holding the actual in-game artefacts.
+					</li>
+					<li>
+						Added &quot;distance travelled&quot; to the list of stats shown after beating the game.
+					</li>
+					<li>
+						On Android, during the intro &amp; outro, the game now has an extra pair of touch controls
+						for switching to the previous/next slide.
+					</li>
+				</ul>
+			</description>
+		</release>
+		<release version="2.1" date="2024-07-01">
+			<description>
+				<p>Version 2.1 brings a slew of new features and quality-of-live improvements to the game.</p>
+				<ul>
+					<li>
+						The game will now track various statistics, like total completion time (yay, speedrunning!)
+						and display them on the finish screen. Note that this feature will be disabled for existing save games;
+						you will need to start a new game.
+						(Collected data is only stored locally and is not transmitted anywhere.)
+					</li>
+					<li>
+						The yellow zone has been reworked slightly. Previously, it was possible to complete it while
+						completely skipping one of the rooms. With this update, visiting all rooms is mandatory.
+					</li>
+					<li>
+						The &quot;set key bindings&quot; screen will now display active key bindings,
+						and prevent attempts to bind the same key multiple times.
+					</li>
+					<li>
+						Menu items are now tinted green (or red, if they're inactive) to help distinguish
+						between stuff you can interact with, and informative text.
+					</li>
+				</ul>
+				<p>The following Android-specific changes have also been made:</p>
+				<ul>
+					<li>
+						Added a &quot;go back&quot; touch control. This should help players who have their phone
+						set to gesture navigation mode and thus do not have a system-provided &quot;back&quot; button.
+					</li>
+					<li>
+						Added a new options menu, allowing to swap the position of touch controls.
+					</li>
+					<li>
+						Added initial support for square-ish aspect ratio. This is still rather wonky, though.
+					</li>
+				</ul>
+			</description>
+		</release>
+		<release version="2.0" date="2022-12-16">
+			<description>
+				<p>
+					Version 2.0 commemorates the game's 10th anniversary by introducing many quality-of-life improvements.
+				</p>
+				<ul>
+					<li>Rewrote the game from the old <code>SDL 1.2</code> library to the newer <code>SDL 2.24</code> library.</li>
+					<li>Ported the game to Android.</li>
+					<li>Added a menu screen for customizing game zone colours.</li>
+					<li>
+						Improved performance of room scripts – instead of being parsed anew during each room change,
+						they are now parsed once during the loading phase and then executed from memory.
+					</li>
+				</ul>
+			</description>
+		</release>
+		<release version="1.3" date="2017-07-25">
+			<description>
+				<p>Version 1.3 brings various assorted fixes and improvements.</p>
+				<ul>
+					<li>Added support for navigating the menu using the mouse.</li>
+					<li>Made the green zone a little bit harder by adding an extra door that needs to be unlocked.</li>
+					<li>Fixed the hero getting stuck at edges of the screen instead of moving into next room.</li>
+					<li>Fixed some misaligned exits between rooms.</li>
+				</ul>
+			</description>
+		</release>
+		<release version="1.2" date="2014-03-16">
+			<description><p>
+				Version 1.2 replaces the proprietary <code>BASS</code> audio handling library with the free <code>SDL_mixer</code> library.
+			</p></description>
+		</release>
+		<release version="1.1" date="2012-12-26">
+			<description>
+				<p>Version 1.1 introduces multiple quality-of-life improvements.</p>
+				<ul>
+					<li>Added the save &amp; load feature. The game will be saved automatically upon progress, or death.</li>
+					<li>Added a tutorial world.</li>
+					<li>Added a menu screen for changing the key bindings.</li>
+					<li>Added possibility to change game window size.</li>
+					<li>Added audio volume control.</li>
+					<li>Added the &quot;pause&quot; feature.</li>
+					<li>Fixed minor issues with enemy AI.</li>
+				</ul>
+			</description>
+		</release>
+		<release version="1.0" date="2012-12-17">
+			<description><p>
+				Initial release.
+			</p></description>
+		</release>
+	</releases>
+
+	<metadata_license>CC-BY-SA-3.0</metadata_license>
+	<update_contact>veg@svgames.pl</update_contact>
+</component>

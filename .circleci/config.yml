@@ -1,0 +1,56 @@
+version: 2.1
+executors:
+  fedora:
+    docker:
+      - image: registry.fedoraproject.org/fedora
+    shell: /usr/bin/bash
+  fpc-for-android:
+    docker:
+      - image: docker.io/suvepl/fpc-for-android:cimg
+    shell: /usr/bin/bash
+
+jobs:
+  linux:
+    executor: fedora
+    steps:
+      - run:
+          name: Install dependencies
+          command: >
+            sudo dnf install --assumeyes --setopt=install_weak_deps=False
+            findutils fpc git glibc-devel make
+            SDL2-devel SDL2_image-devel SDL2_mixer-devel
+      - checkout
+      - run:
+          name: Checkout SDL2-for-Pascal git submodule
+          command: |
+            git submodule update --init -- SDL2
+      - run:
+          name: make executable
+          command: |
+            ./configure.sh
+            make -j1 executable
+  android:
+    executor: fpc-for-android
+    steps:
+      - checkout
+      - run:
+          name: Checkout git submodules
+          command: |
+            git submodule update --init -- SDL2
+            git submodule update --init -- android/libs/SDL2
+            git submodule update --init -- android/libs/SDL2_image
+            git submodule update --init -- android/libs/SDL2_mixer
+      - run:
+          name: Build SDL2 libs
+          command: |
+            ./android/build-SDL2.sh --debug
+      - run:
+          name: Build the game
+          command: |
+            ./android/build-colorful.sh --debug
+
+workflows:
+  build:
+    jobs:
+      - linux
+      - android

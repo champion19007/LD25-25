@@ -1,0 +1,11 @@
+- The game will now track various statistics, like total completion time, and display them on the finish screen. (Collected data is only stored locally and is not transmitted anywhere.)
+
+- The yellow zone has been reworked to make visiting all rooms mandatory.
+
+- Interactive menu items are now tinted green/red.
+
+- Added a "go back" touch control.
+
+- Added a new options menu, allowing to swap the position of touch controls.
+
+- Added initial support for square-ish aspect ratio. (Quite wonky!)
