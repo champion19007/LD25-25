@@ -1,7 +1,6 @@
 # Colorful
 
-Colorful is a simple 2D side-shooter game, originally created in 48 hours
-for the [Ludum Dare](https://ldjam.com) event, 25th edition (December 2012).
+Colorful is a simple 2D side-shooter game, originally created in 48 hours.
 
 This is the "post-compo" version of the game - it has received numerous
 enhancements and bug fixes.
@@ -19,15 +18,13 @@ enhancements and bug fixes.
 </a>
 
 You can download the game from
-[Itch.io](https://suve.itch.io/colorful),
-[Flathub](https://flathub.org/apps/pl.suve.colorful),
-[F-Droid](https://f-droid.org/en/packages/pl.suve.colorful.android/),
-or from the [Releases tab](https://github.com/suve/LD25/releases/latest) here on GitHub.
+
+[F-Droid](https://f-droid.org/en/packages/pl.suve.colorful.android/)
+
 
 The game is available for Linux, Windows, and Android.
 
-<a href="https://flathub.org/apps/pl.suve.colorful"><img src="https://github.com/suve/LD25/raw/trunk/.github/flathub.png" alt="Get it from Flathub"></a>
-<a href="https://suve.itch.io/colorful"><img src="https://github.com/suve/LD25/raw/trunk/.github/itch.png" alt="Get it on Itch.io"></a>
+
 <a href="https://f-droid.org/packages/pl.suve.colorful.android/"><img src="https://github.com/suve/LD25/raw/trunk/.github/fdroid.png" alt="Get it on F-Droid"></a>
 
 ## Build it yourself
